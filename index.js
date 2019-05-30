@@ -1,4 +1,4 @@
 <script>
-console.log('dis my website hehe');
-console.log('hewwwo mistow powice oficow');
+console.log('Hello mistow powice officow!');
+console.log('wuz good');
 </script>
