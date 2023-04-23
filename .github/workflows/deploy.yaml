@@ -1,22 +1,26 @@
-name: Deploy
+name: Store API Key
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+name: Store API Key
+
+on:
+  push:
+    branches: [ main ]
 
 jobs:
-  build:
+  store-api-key:
+    name: Store API Key
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Deploy code
-      env:
-        API_KEY: ${{ secrets.MY_OPENAI_KEY }}
-      run: node gpt/gpt.js
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Store API Key
+        uses: tangtracy/git-auto-commit-action@v4
+        with:
+          commit_message: "Store API key"
+          file_pattern: "../gpt/gpt.js"
+          branch: "main"
+          file_content: |
+            const API_KEY = '${{ secrets.MY_OPENAI_KEY }}';
