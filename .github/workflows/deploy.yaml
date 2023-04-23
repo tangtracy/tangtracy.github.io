@@ -1,8 +1,10 @@
 on: push
 
-steps:
-  - name: Set the API key as an environment variable
-    env:
-      API_KEY: ${{ secrets.MY_OPENAI_KEY }}
-    run: |
-      echo $API_KEY
+jobs:
+    myjob:
+      steps:
+        - name: Set the API key as an environment variable
+          env:
+            API_KEY: ${{ secrets.MY_OPENAI_KEY }}
+          run: |
+            echo $API_KEY
