@@ -1,0 +1,12 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    - name: Deploy code
+      env:
+        MY_OPENAI_KEY: ${{ secrets.MY_OPENAI_KEY }}
