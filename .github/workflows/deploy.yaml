@@ -1,12 +1,6 @@
-name: Deploy
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    - name: Deploy code
-      env:
-        MY_OPENAI_KEY: ${{ secrets.MY_OPENAI_KEY }}
+steps:
+  - name: Set the API key as an environment variable
+    env:
+      API_KEY: ${{ secrets.MY_OPENAI_KEY }}
+    run: |
+      echo $API_KEY

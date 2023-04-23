@@ -92,7 +92,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
 });
 
 async function fetchOpenAiApi(message) {
-    const apiKey = process.env.MY_OPENAI_KEY; // Replace with your OpenAI API key
+    const apiKey = process.env.API_KEY; // Replace with your OpenAI API key
     const apiUrl = 'https://api.openai.com/v1/chat/completions'; // Modify this URL according to the API version and desired engine
 
     const requestOptions = {
