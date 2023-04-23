@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mysubpage.css">
+  <title>Photo Gallery</title>
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+    <nav>
+      <label><input type="checkbox" class="filter-checkbox" value="nature"> Nature</label>
+      <label><input type="checkbox" class="filter-checkbox" value="animals"> Animals</label>
+      <label><input type="checkbox" class="filter-checkbox" value="architecture"> Architecture</label>
+    </nav>
+  </header>
+  <section id="gallery">
+    <!-- Add your images with data-tag attributes for filtering -->
+    <img src="path/to/image1.jpg" alt="description" data-tag="nature">
+    <img src="path/to/image2.jpg" alt="description" data-tag="animals">
+    <img src="path/to/image3.jpg" alt="description" data-tag="architecture">
+    <!-- ... -->
+  </section>
+  <script src="mysubpage.js"></script>
+</body>
+</html>

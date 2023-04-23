@@ -528,6 +528,46 @@ h3 {
     display: block;
 }
 
+.chat-container {
+    width: 48%;
+    border: 12px solid #5f3370;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9px;
+    background-color: black;
+    /* box-shadow: 0 0 20px 5px  #bc13fe; */
+    padding-bottom: 0px !important;
+}
+
+.chat-output {
+    height: 100px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 12px;
+    color: green
+}
+
+.chat-input-container {
+    display: flex;
+}
+
+.chat-input {
+    flex-grow: 1;
+    border: none;
+    background-color: #845896;
+    outline: none;
+    font-size: 12px;
+    color: #f0dec1
+}
+
+.chat-submit {
+    border: none;
+    padding: 10px;
+    background-color: #4b275a;
+    cursor: pointer;
+    color: #f0dec1;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -544,3 +584,68 @@ h3 {
     filter: hue-rotate(360deg);
   }
 }
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f0dec1;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  .scroll {
+    width: 20px;
+    height: 200px;
+    overflow: auto;
+    float: left;
+    margin: 0 10px;
+  }
+  
+  .content {
+    height: 500px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    font-family: sans-serif;
+    margin: 20px;
+  }
+  
+  .scroll4::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  .scroll4::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+  }
+  
+  .scroll4::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+  }
+  
+  
+  
+  
