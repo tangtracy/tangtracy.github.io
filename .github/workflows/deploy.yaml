@@ -3,11 +3,6 @@ name: Store API Key
 on:
   push:
     branches: [ main ]
-name: Store API Key
-
-on:
-  push:
-    branches: [ main ]
 
 jobs:
   store-api-key:
