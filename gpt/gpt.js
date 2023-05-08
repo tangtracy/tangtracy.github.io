@@ -44,7 +44,7 @@ document.getElementById('chat-form').addEventListener('submit', async(event) => 
     // Add user message to chat output with typing animation
     await addMessageWithoutTypingAnimation('You', message);
 
-    message = `Tracy Tang
+    message = `answer in the 3rd person. pretend you are tracy's chatbot. the following information is my resume: Tracy Tang
     tracy-tang.com 
     tracytanggg@gmail.com | 630-729-4928 
 
@@ -82,18 +82,31 @@ document.getElementById('chat-form').addEventListener('submit', async(event) => 
     Used Python scripting to manipulate and merge two XML datastreams 
     Researched and tested a third-party security vulnerability scanner plug-in for its effectiveness as an integrated component of the team’s CI/CD pipeline 
 
-    ` + 'use the above resume to answer the following question: ' + message;
+    about me currently: I'm an application developer at Vanguard, currently in my second rotation in the Technology Leadership Program.
+
+    link to follow me on instagram: https://www.instagram.com/tracytangggg/
+    link to follow me on linkedin: https://www.linkedin.com/in/tracymtang/
+    link to follow me on facebook: https://www.facebook.com/tracy.tang.56884
+    link to my github: https://github.com/tangtracy 
+    link to follow me on all trails: https://www.alltrails.com/members/tracg-tang?utm_campaign=mobile-iphone?utm_campaign=mobile-iphone 
+    link to follow me on strava: https://www.strava.com/athletes/110743050 
+
+    my personal interests: hiking, music, emotional literacy, true crime, plants, painting, running, traveling, and watching shows
+
+    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `if it is not a question, say 'please ask a question'. if it doesn't make sense, just say you don't understand. If it is not relevant, say the question is not relevant to Tracy's site.`;
 
     // Call OpenAI API
     const response = await fetchOpenAiApi(message);
+    console.log("Response ", response)
 
     // Add AI response to chat output with typing animation
     await addMessageWithTypingAnimation('AI', response);
 });
 
 async function fetchOpenAiApi(message) {
-    const apiUrl = 'https://3mksw48l07.execute-api.us-east-1.amazonaws.com/prod'; // Modify this URL according to the API version and desired engine
+    const apiUrl = 'https://pjk4psw4e6.execute-api.us-east-1.amazonaws.com/Tracy'; // Modify this URL according to the API version and desired engine
 
+    console.log("Message ", message);
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -102,6 +115,12 @@ async function fetchOpenAiApi(message) {
         body: message
     };
 
-    const response = await fetch(apiUrl, requestOptions);
-    return response.body;
+    const response = await fetch(apiUrl, requestOptions).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data);
+        return data;
+    });
+    console.log("Response ", response);
+    return response;
 }
