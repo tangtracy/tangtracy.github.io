@@ -33,7 +33,7 @@ function delay(ms) {
 // Start message
 addMessageWithTypingAnimation('AI', "Hi :-) I'm a GPT powered chat bot. Ask me a question about Tracy's site!");
 
-document.getElementById('chat-form').addEventListener('submit', async (event) => {
+document.getElementById('chat-form').addEventListener('submit', async(event) => {
     event.preventDefault();
 
     const chatInput = document.getElementById('chat-input');
@@ -47,15 +47,15 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     message = `Tracy Tang
     tracy-tang.com 
     tracytanggg@gmail.com | 630-729-4928 
-    
+
     SKILLS
     Programming - JavaScript(TypeScript), HTML/CSS, C++, Python, Java 
     Technologies - Angular, NodeJS, NestJS, AWS, DynamoDB (noSQL), Bash, Git, Jira
-    
+
     EDUCATION
     University of Illinois at Urbana-Champaign
     B.S. Computer Engineering, May 2022
-    
+
     EXPERIENCE
     Application Developer - Technology Leadership Program - Vanguard 
     Malvern, PA: August 2022-Present 
@@ -65,7 +65,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     Leadership: 
     Mentored students, recruited students, and  judged hacks, for a grand prize of interviews for best financial literacy, at HackHersー a female, femme, and non-binary hackathon for Rutgers University students 
     Developed engagement activities and a mindfulness session for the Technology Leadership Program participants, encouraging a positive and energetic work environment 
-    
+
     I am now in my second rotation of TLP on the Desk Development team. We build technology tools and solutions for traders. 
 
     Software Engineering Intern - Collins Aerospace 
@@ -73,7 +73,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     Used Python to query for employees’ names and display them on a disk usage site 
     Wrote a Bash script to automate the process of gathering legal information on a large set of board support packages 
     Worked on an F-22 Raptor radio communication team to automate testing on lab equipment 
-    
+
     Software Engineer Intern, Cybersecurity - Forcepoint (powered by Raytheon)
     Champaign, IL: June 2020-August 2020 
     Operated in an Agile Scrum framework to efficiently accomplish tasks with collaboration and input from other software engineers
@@ -92,22 +92,16 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
 });
 
 async function fetchOpenAiApi(message) {
-    const apiKey = 'placeholder'; // Replace with your OpenAI API key
-    const apiUrl = 'https://api.openai.com/v1/chat/completions'; // Modify this URL according to the API version and desired engine
+    const apiUrl = 'https://3mksw48l07.execute-api.us-east-1.amazonaws.com/prod'; // Modify this URL according to the API version and desired engine
 
     const requestOptions = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
+            'Content-Type': 'text/plain',
         },
-        body: JSON.stringify({
-            messages: [{ "role": "user", "content": message }],
-            model: "gpt-3.5-turbo",
-        })
+        body: message
     };
 
     const response = await fetch(apiUrl, requestOptions);
-    const data = await response.json();
-    return data.choices[0].message.content;
+    return response.body;
 }
