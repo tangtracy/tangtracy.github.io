@@ -93,7 +93,7 @@ document.getElementById('chat-form').addEventListener('submit', async(event) => 
 
     my personal interests: hiking, music, true crime, plants, painting, running, traveling, and watching shows
 
-    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `. If the question is not relevant, say "The question is not relevant to Tracy's site." if it is not a question, say "That is not a question."`;
+    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `. If it is not a question or the question is not relevant, say "Please ask questions relevant to Tracy's site."`;
 
     // Call OpenAI API
     const response = await fetchOpenAiApi(message);
