@@ -44,7 +44,7 @@ document.getElementById('chat-form').addEventListener('submit', async(event) => 
     // Add user message to chat output with typing animation
     await addMessageWithoutTypingAnimation('You', message);
 
-    message = `answer in the 3rd person. pretend you are tracy's chatbot. the following information is my resume: Tracy Tang
+    message = `answer in the 3rd person, like you are tracy's chatbot. the following information is my resume: Tracy Tang
     tracy-tang.com 
     tracytanggg@gmail.com | 630-729-4928 
 
@@ -91,9 +91,9 @@ document.getElementById('chat-form').addEventListener('submit', async(event) => 
     link to follow me on all trails: https://www.alltrails.com/members/tracg-tang?utm_campaign=mobile-iphone?utm_campaign=mobile-iphone 
     link to follow me on strava: https://www.strava.com/athletes/110743050 
 
-    my personal interests: hiking, music, emotional literacy, true crime, plants, painting, running, traveling, and watching shows
+    my personal interests: hiking, music, true crime, plants, painting, running, traveling, and watching shows
 
-    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `if it is not a question, say 'please ask a question'. if it doesn't make sense, just say you don't understand. If it is not relevant, say the question is not relevant to Tracy's site.`;
+    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `. If the question is not relevant, say "The question is not relevant to Tracy's site." if it is not a question, say "That is not a question."`;
 
     // Call OpenAI API
     const response = await fetchOpenAiApi(message);
