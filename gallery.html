@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracy Tang - Wildlife Photography</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-image: url('https://tracy-wildlife-photos.s3.amazonaws.com/IMG_0408.JPG');
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #9a77a7; /* Soft purple color */
+      font-family: 'Roboto Mono', Arial, sans-serif; /* Roboto Mono font */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; /* Align title to the top right */
+      height: 100vh;
+      box-sizing: border-box; /* Include padding in element's total width/height */
+    }
+    
+    h1 {
+      font-size: 40px;
+      margin-top: 140px; /* Add top margin for spacing */
+      margin-right: 130px; /* Add right margin for spacing */
+      text-align: right; /* Align the title to the right */
+      margin-bottom: 40px;
+      white-space: nowrap; /* Prevent line breaks */
+      overflow: hidden; /* Hide overflowing text */
+      border-right: 2px solid;
+      animation: typing 3s steps(30), blink 1s infinite; /* Add animation for typing and blinking */
+    }
+    
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 1000px;
+      }
+    }
+    
+    @keyframes blink {
+      50% {
+        border-color: transparent; /* Hide the cursor */
+      }
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-gap: 40px; /* Spacing between grid items */
+      justify-content: flex-end; /* Right-align the gallery */
+      align-self: flex-end; /* Move the gallery to the right 50% */
+      margin-bottom: auto; /* Push the gallery to the bottom */
+      padding-top: 0px; /* Add bottom padding */
+      padding-right: 40px;
+    }
+    
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin: 10px;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: filter 0.3s ease-in-out; /* Add transition effect */
+    }
+    
+    .image-container img:hover {
+      filter: brightness(80%); /* Apply darker filter on hover */
+    }
+    
+    .image-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 5px;
+      color: rgba(0, 0, 0); /* Brown color with transparency */
+      font-weight: bold;
+      font-size: 18px;
+      text-align: left; /* Align the text to the left */
+      opacity: 0.7; /* Set the text opacity */
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Tracy Tang - Wildlife Photography</h1>
+  
+  <div class="gallery">
+    <div class="image-container"><a href="birds.html">
+      <img class="image" src="https://tracy-wildlife-photos.s3.amazonaws.com/IMG_1921.JPG" onclick="showImage('birds')">
+      <div class="image-label">Birds</div>
+    </div></a>
+    <div class="image-container"><a href="mammals.html">
+      <img class="image" src="https://tracy-wildlife-photos.s3.amazonaws.com/IMG_2228.JPG" onclick="showImage('mammals')">
+      <div class="image-label">Mammals</div>
+    </div></a>
+    <div class="image-container"><a href="insects.html">
+      <img class="image" src="https://tracy-wildlife-photos.s3.amazonaws.com/IMG_0561.JPG" onclick="showImage('insects')">
+      <div class="image-label">Insects</div>
+    </div></a>
+    <div class="image-container"><a href="landscapes.html">
+      <img class="image" src="https://tracy-wildlife-photos.s3.amazonaws.com/IMG_2063.JPG" onclick="showImage('landscapes')">
+      <div class="image-label">Landscapes</div>
+    </div></a>
+  </div>
+
+  <script>
+    function showImage(category) {
+      // Hide all the images
+      const images = document.querySelectorAll('.image');
+      images.forEach((image) => {
+        image.style.display = 'none';
+      });
+
+      // Show the selected category images
+      const selectedImages = document.querySelectorAll(`.image[data-category="${category}"]`);
+      selectedImages.forEach((image) => {
+        image.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

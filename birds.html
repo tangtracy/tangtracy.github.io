@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tracy Tang | Wildlife Photography | Birds</title>
+    <style>
+        body {
+            background-color: #fef5e7;
+            /* Cream background color */
+            color: #8b5a2b;
+            /* Soft brown font color */
+            font-family: 'Roboto Mono', monospace;
+            /* Roboto Mono font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #124d0d;
+            font-weight: bold;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .species {
+            margin-bottom: 30px;
+        }
+
+        .species img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tracy Tang | Wildlife Photography | Birds</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#red-winged-blackbird">Red-winged Blackbird</a></li>
+            <li><a href="#american-robin">American Robin</a></li>
+            <li><a href="#northern-cardinal">Northern Cardinal</a></li>
+            <li><a href="#song-sparrow">Song Sparrow</a></li>
+            <li><a href="#american-goldfinch">American Goldfinch</a></li>
+            <li><a href="#blue-jay">Blue Jay</a></li>
+            <li><a href="#common-starling">Common Starling</a></li>
+            <li><a href="#northern-flicker">Northern Flicker</a></li>
+            <li><a href="#eastern-bluebird">Eastern Bluebird</a></li>
+            <li><a href="#black-vulture">Black Vulture</a></li>
+            <li><a href="#red-bellied-woodpecker">Red-bellied Woodpecker</a></li>
+            <li><a href="#tree-swallow">Tree Swallow</a></li>
+            <li><a href="#gray-catbird">Gray Catbird</a></li>
+            <li><a href="#orchard-oriole">Orchard Oriole</a></li>
+            <li><a href="#cedar-waxwing">Cedar Waxwing</a></li>
+            <li><a href="#eastern-kingbird">Eastern Kingbird</a></li>
+            <li><a href="#northern-mockingbird">Northern Mockingbird</a></li>
+            <li><a href="#mourning-dove">Mourning Dove</a></li>
+            <li><a href="#baltimore-oriole">Baltimore Oriole</a></li>
+            <li><a href="#indigo-bunting">Indigo Bunting</a></li>
+            <li><a href="#canada-goose">Canada Goose</a></li>
+            <li><a href="#black-capped-chickadee">Black-capped Chickadee</a></li>
+            <li><a href="#red-tailed-hawk">Red-tailed Hawk</a></li>
+            <li><a href="#unidentified">Unidentified</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="red-winged-blackbird" class="species">
+            <h2>Red-winged Blackbird</h2>
+            <div id="red-winged-blackbird-images"></div>
+        </div>
+        <div id="american-robin" class="species">
+            <h2>American Robin</h2>
+            <div id="american-robin-images"></div>
+        </div>
+        <div id="northern-cardinal" class="species">
+            <h2>Northern Cardinal</h2>
+            <div id="northern-cardinal-images"></div>
+        </div>
+        <div id="song-sparrow" class="species">
+            <h2>Song Sparrow</h2>
+            <div id="song-sparrow-images"></div>
+        </div>
+        <div id="american-goldfinch" class="species">
+            <h2>American Goldfinch</h2>
+            <div id="american-goldfinch-images"></div>
+        </div>
+        <div id="blue-jay" class="species">
+            <h2>Blue Jay</h2>
+            <div id="blue-jay-images"></div>
+        </div>
+        <div id="common-starling" class="species">
+            <h2>Common Starling</h2>
+            <div id="common-starling-images"></div>
+        </div>
+        <div id="northern-flicker" class="species">
+            <h2>Northern Flicker</h2>
+            <div id="northern-flicker-images"></div>
+        </div>
+        <div id="eastern-bluebird" class="species">
+            <h2>Eastern Bluebird</h2>
+            <div id="eastern-bluebird-images"></div>
+        </div>
+        <div id="black-vulture" class="species">
+            <h2>Black Vulture</h2>
+            <div id="black-vulture-images"></div>
+        </div>
+        <div id="red-bellied-woodpecker" class="species">
+            <h2>Red-bellied Woodpecker</h2>
+            <div id="red-bellied-woodpecker-images"></div>
+        </div>
+        <div id="tree-swallow" class="species">
+            <h2>Tree Swallow</h2>
+            <div id="tree-swallow-images"></div>
+        </div>
+        <div id="gray-catbird" class="species">
+            <h2>Gray Catbird</h2>
+            <div id="gray-catbird-images"></div>
+        </div>
+        <div id="orchard-oriole" class="species">
+            <h2>Orchard Oriole</h2>
+            <div id="orchard-oriole-images"></div>
+        </div>
+        <div id="cedar-waxwing" class="species">
+            <h2>Cedar Waxwing</h2>
+            <div id="cedar-waxwing-images"></div>
+        </div>
+        <div id="eastern-kingbird" class="species">
+            <h2>Eastern Kingbird</h2>
+            <div id="eastern-kingbird-images"></div>
+        </div>
+        <div id="northern-mockingbird" class="species">
+            <h2>Northern Mockingbird</h2>
+            <div id="northern-mockingbird-images"></div>
+        </div>
+        <div id="mourning-dove" class="species">
+            <h2>Mourning Dove</h2>
+            <div id="mourning-dove-images"></div>
+        </div>
+        <div id="baltimore-oriole" class="species">
+            <h2>Baltimore Oriole</h2>
+            <div id="baltimore-oriole-images"></div>
+        </div>
+        <div id="indigo-bunting" class="species">
+            <h2>Indigo Bunting</h2>
+            <div id="indigo-bunting-images"></div>
+        </div>
+        <div id="canada-goose" class="species">
+            <h2>Canada Goose</h2>
+            <div id="canada-goose-images"></div>
+        </div>
+        <div id="black-capped-chickadee" class="species">
+            <h2>Black-capped Chickadee</h2>
+            <div id="black-capped-chickadee-images"></div>
+        </div>
+        <div id="red-tailed-hawk" class="species">
+            <h2>Red-tailed Hawk</h2>
+            <div id="red-tailed-hawk-images"></div>
+        </div>
+        <div id="unidentified" class="species">
+            <h2>Unidentified</h2>
+            <div id="unidentified-images"></div>
+        </div>
+    </section>
+
+    <script>
+        urls = {
+            'redwingedblackbird':
+                [
+                    'IMG_0016',
+                    'IMG_0025',
+                    'IMG_0138',
+                    'IMG_0154',
+                    'IMG_0156',
+                    'IMG_0178',
+                    'IMG_0873',
+                    'IMG_1078',
+                    'IMG_1148',
+                    'IMG_1284',
+                    'IMG_0596',
+                ],
+            'americanrobin':
+                [
+                    'IMG_0986',
+                    'IMG_0484',
+                    'IMG_1397',
+                    'IMG_1409',
+                    'IMG_1410',
+                    'IMG_1412',
+                    'IMG_0047',
+                    'IMG_0212',
+                    'IMG_0255',
+                    'IMG_0404',
+                    'IMG_0440',
+                    'IMG_1232',
+                    'IMG_2696',
+                ],
+            'northerncardinal':
+                [
+                    'IMG_0328',
+                    'IMG_0377',
+                ],
+            'songsparrow':
+                [
+                    'IMG_0654',
+                    'IMG_2162',
+                    'IMG_2273',
+                    'IMG_2276',
+                ],
+            'americangoldfinch':
+                [
+                    'IMG_2510',
+                    'IMG_2523',
+                    'IMG_2609',
+                    'IMG_2673',
+                    'IMG_2691',
+                ],
+            'bluejay':
+                [
+                    'IMG_0083',
+                    'IMG_0094',
+                ],
+            'commonstarling':
+                [
+                    'IMG_1703',
+                    'IMG_1734',
+                ],
+            'northernflicker':
+                [
+                    'IMG_0271',
+                    'IMG_0274',
+                    'IMG_0278',
+                ],
+            'easternbluebird':
+                [
+                    'IMG_0408',
+                ],
+            'blackvulture':
+                [
+                    'IMG_0453',
+                    'IMG_0866',
+                    'IMG_0868',
+                ],
+            'redbelliedwoodpecker':
+                [
+                    'IMG_0465',
+                    'IMG_0467',
+                ],
+            'treeswallow':
+                [
+                    'IMG_0505',
+                    'IMG_0535',
+                ],
+            'graycatbird':
+                [
+                    'IMG_0666',
+                    'IMG_0667',
+                    'IMG_1021',
+                    'IMG_1652',
+                    'IMG_1791',
+                    'IMG_1792',
+                    'IMG_1899',
+                    'IMG_1912',
+                    'IMG_1916',
+                    'IMG_1919',
+                    'IMG_1921',
+                    'IMG_1934',
+                    'IMG_2870',
+                    'IMG_2984',
+                    'IMG_3047',
+                    'IMG_3054',
+                ],
+            'orchardoriole':
+                [
+                    'IMG_0862',
+                    'IMG_0897',
+                    'IMG_0898',
+                    'IMG_1114',
+                    'IMG_1115',
+                    'IMG_2043',
+                ],
+            'cedarwaxwing':
+                [
+                    'IMG_0939',
+                    'IMG_0944',
+                    'IMG_0952',
+                    'IMG_0956',
+                ],
+            'easternkingbird':
+                [
+                    'IMG_1060',
+                    'IMG_1064',
+                ],
+            'northernmockingbird':
+                [
+                    'IMG_1163',
+                ],
+            'mourningdove':
+                [
+                    'IMG_0797',
+                    'IMG_1196',
+                    'IMG_1197',
+                ],
+            'baltimoreoriole':
+                [
+                    'IMG_1761',
+                    'IMG_1763',
+                    'IMG_1769',
+                    'IMG_1771',
+                    'IMG_1003',
+                    'IMG_1006',
+                ],
+            'indigobunting':
+                [
+                    'IMG_1827',
+                    'IMG_1840',
+                ],
+            'canadagoose':
+                [
+                    'IMG_1341',
+                    'IMG_1363',
+                    'IMG_1364',
+                    'IMG_1368',
+                ],
+            'blackcappedchickadee':
+                [
+                    'IMG_1606',
+                    'IMG_1609',
+                ],
+            'redtailedhawk':
+                [
+                    'IMG_0129',
+                ],
+            'unidentified':
+                [
+                    'IMG_0397',
+                    'IMG_2254',
+                ],
+
+        }
+
+
+        function displayImages(speciesName, containerId) {
+            const container = document.getElementById(containerId);
+            const partialUrl = 'https://tracy-wildlife-photos.s3.amazonaws.com/birds/';
+            const speciesFolder = speciesName.toLowerCase().replace(/\s+/g, '-') + '/';
+            const speciesKey = speciesName.toLowerCase().replace(/-|\s/g, "");
+            const speciesImages = urls[speciesKey];
+            let imagesHTML = '';
+            const spacing = 'margin: 0px 0px 0px 4px;';
+            const imageStyle = 'transition: filter 0.3s ease-in-out; width: 450px; height: auto;';
+            const hoverStyle = 'filter: brightness(70%);';
+            for (let url = 0; url < speciesImages.length; url++) {
+                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.JPG';
+                console.log(imageUrl)
+                imagesHTML += '<img src="' + imageUrl + '" style="' + spacing + imageStyle + '" alt="' + speciesName + '">';
+            }
+            container.innerHTML = imagesHTML;
+
+            // Add event listeners to the images
+            const images = container.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                image.addEventListener('click', function () {
+                    window.open(this.src);
+                });
+                image.addEventListener('mouseover', function () {
+                    this.style.filter = 'brightness(70%)';
+                });
+                image.addEventListener('mouseout', function () {
+                    this.style.filter = '';
+                });
+            }
+        }
+
+
+        function displayAllImages() {
+            displayImages('Red-winged Blackbird', 'red-winged-blackbird-images');
+            displayImages('American Robin', 'american-robin-images');
+            displayImages('Northern Cardinal', 'northern-cardinal-images');
+            displayImages('Song Sparrow', 'song-sparrow-images');
+            displayImages('American Goldfinch', 'american-goldfinch-images');
+            displayImages('Blue Jay', 'blue-jay-images');
+            displayImages('Common Starling', 'common-starling-images');
+            displayImages('Northern Flicker', 'northern-flicker-images');
+            displayImages('Eastern Bluebird', 'eastern-bluebird-images');
+            displayImages('Black Vulture', 'black-vulture-images');
+            displayImages('Red-bellied Woodpecker', 'red-bellied-woodpecker-images');
+            displayImages('Tree Swallow', 'tree-swallow-images');
+            displayImages('Gray Catbird', 'gray-catbird-images');
+            displayImages('Orchard Oriole', 'orchard-oriole-images');
+            displayImages('Cedar Waxwing', 'cedar-waxwing-images');
+            displayImages('Eastern Kingbird', 'eastern-kingbird-images');
+            displayImages('Northern Mockingbird', 'northern-mockingbird-images');
+            displayImages('Mourning Dove', 'mourning-dove-images');
+            displayImages('Baltimore Oriole', 'baltimore-oriole-images');
+            displayImages('Indigo Bunting', 'indigo-bunting-images');
+            displayImages('Canada Goose', 'canada-goose-images');
+            displayImages('Black-capped Chickadee', 'black-capped-chickadee-images');
+            displayImages('Red-tailed Hawk', 'red-tailed-hawk-images');
+            displayImages('Unidentified', 'unidentified-images');
+        }
+
+        displayAllImages()
+
+
+
+        // const bucketURL = 'https://s3.amazonaws.com/tracy-wildlife-photos/';
+        // // Function to fetch and display images for a given species
+        // function fetchAndDisplayImages(speciesName, containerId) {
+        //     const container = document.getElementById(containerId);
+        //     const folderName = speciesName.toLowerCase().replace(/\s+/g, '-');
+        //     const folderURL = bucketURL + folderName + '/';
+        //     const xmlHttp = new XMLHttpRequest();
+        //     res = xmlHttp.open('GET', folderURL, true);
+        //     console.log('res', res, speciesName)
+        //     res2 = xmlHttp.send();
+        //     console.log('res2', res2)
+        //     xmlHttp.onreadystatechange = function () {
+        //         if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+        //             const parser = new DOMParser();
+        //             console.log('xmlHttp.responseText', xmlHttp.responseText)
+        //             const htmlDoc = parser.parseFromString(xmlHttp.responseText, 'text/html');
+        //             const images = htmlDoc.getElementsByTagName('Contents');
+        //             let imagesHTML = '';
+        //             for (let i = 0; i < images.length; i++) {
+        //                 const imageUrl = folderURL + images[i].getElementsByTagName('Key')[0].textContent;
+        //                 imagesHTML += '<img src="' + imageUrl + '" alt="' + speciesName + '">';
+        //             }
+        //             container.innerHTML = imagesHTML;
+        //         }
+        //     };
+        // }
+
+        // // Fetch and display images for each species
+        // function fetchAndDisplayAllImages() {
+        //     fetchAndDisplayImages('Red-winged Blackbird', 'red-winged-blackbird-images');
+        //     fetchAndDisplayImages('American Robin', 'american-robin-images');
+        //     fetchAndDisplayImages('Northern Cardinal', 'northern-cardinal-images');
+        //     fetchAndDisplayImages('Song Sparrow', 'song-sparrow-images');
+        //     fetchAndDisplayImages('American Goldfinch', 'american-goldfinch-images');
+        //     fetchAndDisplayImages('Blue Jay', 'blue-jay-images');
+        //     fetchAndDisplayImages('Common Starling', 'common-starling-images');
+        //     fetchAndDisplayImages('Northern Flicker', 'northern-flicker-images');
+        //     fetchAndDisplayImages('Eastern Bluebird', 'eastern-bluebird-images');
+        //     fetchAndDisplayImages('Black Vulture', 'black-vulture-images');
+        //     fetchAndDisplayImages('Red-bellied Woodpecker', 'red-bellied-woodpecker-images');
+        //     fetchAndDisplayImages('Tree Swallow', 'tree-swallow-images');
+        //     fetchAndDisplayImages('Gray Catbird', 'gray-catbird-images');
+        //     fetchAndDisplayImages('Orchard Oriole', 'orchard-oriole-images');
+        //     fetchAndDisplayImages('Cedar Waxwing', 'cedar-waxwing-images');
+        //     fetchAndDisplayImages('Eastern Kingbird', 'eastern-kingbird-images');
+        //     fetchAndDisplayImages('Northern Mockingbird', 'northern-mockingbird-images');
+        //     fetchAndDisplayImages('Mourning Dove', 'mourning-dove-images');
+        //     fetchAndDisplayImages('Baltimore Oriole', 'baltimore-oriole-images');
+        //     fetchAndDisplayImages('Indigo Bunting', 'indigo-bunting-images');
+        //     fetchAndDisplayImages('Canada Goose', 'canada-goose-images');
+        //     fetchAndDisplayImages('Black-capped Chickadee', 'black-capped-chickadee-images');
+        //     fetchAndDisplayImages('Red-tailed Haws', 'red-tailed-hawk-images');
+        //     fetchAndDisplayImages('Unidentified', 'unidentified-images');
+        // }
+
+
+        // // Call the function to fetch and display images for all species
+        // fetchAndDisplayAllImages();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tracy Tang | Wildlife Photography | Mammals</title>
+    <style>
+        body {
+            background-color: #fef5e7;
+            /* Cream background color */
+            color: #8b5a2b;
+            /* Soft brown font color */
+            font-family: 'Roboto Mono', monospace;
+            /* Roboto Mono font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #225611;
+            font-weight: bold;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            font-size: 0.9em;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .species {
+            margin-bottom: 30px;
+        }
+
+        .species img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tracy Tang | Wildlife Photography | Mammals</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#white-tailed-deer">White-tailed Deer</a></li>
+            <li><a href="#gray-squirrel">Gray Squirrel</a></li>
+            <li><a href="#domestic-short-haired-cat">Domestic Short-Haired Cat</a></li>
+            <li><a href="#cottontail-rabbit">Cottontail Rabbit</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="gray-squirrel" class="species">
+            <h2>Gray Squirrel</h2>
+            <div id="gray-squirrel-images"></div>
+        </div>
+        <div id="white-tailed-deer" class="species">
+            <h2>White-tailed Deer</h2>
+            <div id="white-tailed-deer-images"></div>
+        </div>
+        <div id="cottontail-rabbit" class="species">
+            <h2>Cottontail Rabbit</h2>
+            <div id="cottontail-rabbit-images"></div>
+        </div>
+        <div id="domestic-short-haired-cat" class="species">
+            <h2>Domestic Short-Haired Cat</h2>
+            <div id="domestic-short-haired-cat-images"></div>
+        </div>
+    </section>
+
+    <script>
+        urls = {
+            'whitetaileddeer':
+                [
+                    'IMG_0673',
+                    'IMG_0688',
+                    'IMG_0693',
+                    'IMG_0706',
+                    'IMG_0763',
+                    'IMG_0821',
+                    'IMG_0822',
+                    'IMG_1027',
+                    'IMG_1036',
+                    'IMG_1037',
+                    'IMG_1038',
+                    'IMG_1242',
+                    'IMG_1243',
+                    'IMG_1244',
+                    'IMG_1246',
+                    'IMG_1249',
+                    'IMG_1250',
+                    'IMG_1851',
+                    'IMG_1853',
+                    'IMG_2140',
+                    'IMG_2228',
+                    'IMG_2237',
+                    'IMG_2238',
+                    'IMG_2248',
+                    'IMG_2787',
+                    'IMG_2829',
+                    'IMG_2854',
+                    'IMG_2857',
+                ],
+            'graysquirrel':
+                [
+                    'IMG_2085',
+                ],
+            'domesticshorthairedcat':
+                [
+                    'IMG_0247',
+                ],
+            'cottontailrabbit':
+                [
+                    'IMG_1085',
+                    'IMG_2107',
+                    'IMG_2115',
+                    'IMG_2219',
+                    'IMG_2334',
+                    'IMG_2357',
+                    'IMG_2360',
+                    'IMG_2361',
+                    'IMG_2364',
+                    'IMG_2740',
+                ],
+        }
+
+
+        function displayImages(speciesName, containerId) {
+            const container = document.getElementById(containerId);
+            const partialUrl = 'https://tracy-wildlife-photos.s3.amazonaws.com/mammals/';
+            const speciesFolder = speciesName.toLowerCase().replace(/\s+/g, '-') + '/';
+            const speciesKey = speciesName.toLowerCase().replace(/-|\s/g, "");
+            const speciesImages = urls[speciesKey];
+            let imagesHTML = '';
+            const spacing = 'margin: 0px 0px 0px 4px;';
+            const imageStyle = 'transition: filter 0.3s ease-in-out; width: 450px; height: auto;';
+            const hoverStyle = 'filter: brightness(70%);';
+            for (let url = 0; url < speciesImages.length; url++) {
+                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.JPG';
+                console.log(imageUrl)
+                imagesHTML += '<img src="' + imageUrl + '" style="' + spacing + imageStyle + '" alt="' + speciesName + '">';
+            }
+            container.innerHTML = imagesHTML;
+
+            // Add event listeners to the images
+            const images = container.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                image.addEventListener('click', function () {
+                    window.open(this.src);
+                });
+                image.addEventListener('mouseover', function () {
+                    this.style.filter = 'brightness(70%)';
+                });
+                image.addEventListener('mouseout', function () {
+                    this.style.filter = '';
+                });
+            }
+        }
+
+
+        function displayAllImages() {
+            displayImages('White-tailed Deer', 'white-tailed-deer-images');
+            displayImages('Gray Squirrel', 'gray-squirrel-images');
+            displayImages('Domestic Short-Haired Cat', 'domestic-short-haired-cat-images');
+            displayImages('Cottontail Rabbit', 'cottontail-rabbit-images');
+        }
+
+        displayAllImages()
+
+    </script>
+</body>
+
+</html>

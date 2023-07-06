@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tracy Tang | Wildlife Photography | Landscapes</title>
+    <style>
+        body {
+            background-color: #fef5e7;
+            /* Cream background color */
+            color: #8b5a2b;
+            /* Soft brown font color */
+            font-family: 'Roboto Mono', monospace;
+            /* Roboto Mono font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #225611;
+            font-weight: bold;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            font-size: 0.9em;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .species {
+            margin-bottom: 30px;
+        }
+
+        .species img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tracy Tang | Wildlife Photography | Landscapes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#sky">Sky</a></li>
+            <li><a href="#land">Land</a></li>
+            <li><a href="#vegetation">Vegetation</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="sky" class="species">
+            <h2>Sky</h2>
+            <div id="sky-images"></div>
+        </div>
+        <div id="land" class="species">
+            <h2>Land</h2>
+            <div id="land-images"></div>
+        </div>
+        <div id="vegetation" class="species">
+            <h2>Vegetation</h2>
+            <div id="vegetation-images"></div>
+        </div>
+    </section>
+
+    <script>
+        urls = {
+            'sky':
+                [
+                    'IMG_0453',
+                    'IMG_0866',
+                    'IMG_0868',
+                    'IMG_1227',
+                    'IMG_1751',
+                    'IMG_1757',
+                    'IMG_2033',
+                    'IMG_2035',
+                    'IMG_2126',
+                    'IMG_2856',
+                ],
+            'land':
+                [
+                    'IMG_1220',
+                    'IMG_1627',
+                    'IMG_1635',
+                    'IMG_2093',
+                ],
+            'vegetation':
+                [
+                    'IMG_0486',
+                    'IMG_1613',
+                ],
+        }
+
+
+        function displayImages(speciesName, containerId) {
+            const container = document.getElementById(containerId);
+            const partialUrl = 'https://tracy-wildlife-photos.s3.amazonaws.com/landscapes/';
+            const speciesFolder = speciesName.toLowerCase().replace(/\s+/g, '-') + '/';
+            const speciesKey = speciesName.toLowerCase().replace(/-|\s/g, "");
+            const speciesImages = urls[speciesKey];
+            let imagesHTML = '';
+            const spacing = 'margin: 0px 0px 0px 4px;';
+            const imageStyle = 'transition: filter 0.3s ease-in-out; width: 450px; height: auto;';
+            const hoverStyle = 'filter: brightness(70%);';
+            for (let url = 0; url < speciesImages.length; url++) {
+                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.JPG';
+                console.log(imageUrl)
+                imagesHTML += '<img src="' + imageUrl + '" style="' + spacing + imageStyle + '" alt="' + speciesName + '">';
+            }
+            container.innerHTML = imagesHTML;
+
+            // Add event listeners to the images
+            const images = container.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                image.addEventListener('click', function () {
+                    window.open(this.src);
+                });
+                image.addEventListener('mouseover', function () {
+                    this.style.filter = 'brightness(70%)';
+                });
+                image.addEventListener('mouseout', function () {
+                    this.style.filter = '';
+                });
+            }
+        }
+
+
+        function displayAllImages() {
+            displayImages('Sky', 'sky-images');
+            displayImages('Land', 'land-images');
+            displayImages('Vegetation', 'vegetation-images');
+        }
+
+        displayAllImages()
+
+    </script>
+</body>
+
+</html>
