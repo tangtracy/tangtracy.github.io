@@ -33,7 +33,7 @@ function delay(ms) {
 // Start message
 addMessageWithTypingAnimation('AI', "Hi :-) I'm a GPT powered chat bot. Ask me a question about Tracy's site!");
 
-document.getElementById('chat-form').addEventListener('submit', async (event) => {
+document.getElementById('chat-form').addEventListener('submit', async(event) => {
     event.preventDefault();
 
     const chatInput = document.getElementById('chat-input');
@@ -44,18 +44,18 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     // Add user message to chat output with typing animation
     await addMessageWithoutTypingAnimation('You', message);
 
-    message = `Tracy Tang
+    message = `answer in the 3rd person, like you are tracy's chatbot. the following information is my resume: Tracy Tang
     tracy-tang.com 
     tracytanggg@gmail.com | 630-729-4928 
-    
+
     SKILLS
     Programming - JavaScript(TypeScript), HTML/CSS, C++, Python, Java 
     Technologies - Angular, NodeJS, NestJS, AWS, DynamoDB (noSQL), Bash, Git, Jira
-    
+
     EDUCATION
     University of Illinois at Urbana-Champaign
     B.S. Computer Engineering, May 2022
-    
+
     EXPERIENCE
     Application Developer - Technology Leadership Program - Vanguard 
     Malvern, PA: August 2022-Present 
@@ -65,7 +65,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     Leadership: 
     Mentored students, recruited students, and  judged hacks, for a grand prize of interviews for best financial literacy, at HackHersー a female, femme, and non-binary hackathon for Rutgers University students 
     Developed engagement activities and a mindfulness session for the Technology Leadership Program participants, encouraging a positive and energetic work environment 
-    
+
     I am now in my second rotation of TLP on the Desk Development team. We build technology tools and solutions for traders. 
 
     Software Engineering Intern - Collins Aerospace 
@@ -73,7 +73,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     Used Python to query for employees’ names and display them on a disk usage site 
     Wrote a Bash script to automate the process of gathering legal information on a large set of board support packages 
     Worked on an F-22 Raptor radio communication team to automate testing on lab equipment 
-    
+
     Software Engineer Intern, Cybersecurity - Forcepoint (powered by Raytheon)
     Champaign, IL: June 2020-August 2020 
     Operated in an Agile Scrum framework to efficiently accomplish tasks with collaboration and input from other software engineers
@@ -82,32 +82,45 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
     Used Python scripting to manipulate and merge two XML datastreams 
     Researched and tested a third-party security vulnerability scanner plug-in for its effectiveness as an integrated component of the team’s CI/CD pipeline 
 
-    ` + 'use the above resume to answer the following question: ' + message;
+    about me currently: I'm an application developer at Vanguard, currently in my second rotation in the Technology Leadership Program.
+
+    link to follow me on instagram: https://www.instagram.com/tracytangggg/
+    link to follow me on linkedin: https://www.linkedin.com/in/tracymtang/
+    link to follow me on facebook: https://www.facebook.com/tracy.tang.56884
+    link to my github: https://github.com/tangtracy 
+    link to follow me on all trails: https://www.alltrails.com/members/tracg-tang?utm_campaign=mobile-iphone?utm_campaign=mobile-iphone 
+    link to follow me on strava: https://www.strava.com/athletes/110743050 
+
+    my personal interests: hiking, music, true crime, plants, painting, running, traveling, and watching shows
+
+    ` + 'now that you have my resume, use it to answer the following question for a chatbot: ' + message + `. If it is not a question or the question is not relevant, say "Please ask questions relevant to Tracy's site."`;
 
     // Call OpenAI API
     const response = await fetchOpenAiApi(message);
+    console.log("Response ", response)
 
     // Add AI response to chat output with typing animation
     await addMessageWithTypingAnimation('AI', response);
 });
 
 async function fetchOpenAiApi(message) {
-    const apiKey = 'placeholder'; // Replace with your OpenAI API key
-    const apiUrl = 'https://api.openai.com/v1/chat/completions'; // Modify this URL according to the API version and desired engine
+    const apiUrl = 'https://pjk4psw4e6.execute-api.us-east-1.amazonaws.com/Tracy'; // Modify this URL according to the API version and desired engine
 
+    console.log("Message ", message);
     const requestOptions = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
+            'Content-Type': 'text/plain',
         },
-        body: JSON.stringify({
-            messages: [{ "role": "user", "content": message }],
-            model: "gpt-3.5-turbo",
-        })
+        body: message
     };
 
-    const response = await fetch(apiUrl, requestOptions);
-    const data = await response.json();
-    return data.choices[0].message.content;
+    const response = await fetch(apiUrl, requestOptions).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data);
+        return data;
+    });
+    console.log("Response ", response);
+    return response;
 }
