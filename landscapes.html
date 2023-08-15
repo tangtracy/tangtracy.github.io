@@ -96,28 +96,28 @@
         urls = {
             'sky':
                 [
-                    'IMG_0453',
-                    'IMG_0866',
-                    'IMG_0868',
-                    'IMG_1227',
-                    'IMG_1751',
-                    'IMG_1757',
-                    'IMG_2033',
-                    'IMG_2035',
-                    'IMG_2126',
-                    'IMG_2856',
+                    'IMG_0453_small',
+                    'IMG_0866_small',
+                    'IMG_0868_small',
+                    'IMG_1227_small',
+                    'IMG_1751_small',
+                    'IMG_1757_small',
+                    'IMG_2033_small',
+                    'IMG_2035_small',
+                    'IMG_2126_small',
+                    'IMG_2856_small',
                 ],
             'land':
                 [
-                    'IMG_1220',
-                    'IMG_1627',
-                    'IMG_1635',
-                    'IMG_2093',
+                    'IMG_1220_small',
+                    'IMG_1627_small',
+                    'IMG_1635_small',
+                    'IMG_2093_small',
                 ],
             'vegetation':
                 [
-                    'IMG_0486',
-                    'IMG_1613',
+                    'IMG_0486_small',
+                    'IMG_1613_small',
                 ],
         }
 
@@ -133,7 +133,7 @@
             const imageStyle = 'transition: filter 0.3s ease-in-out; width: 450px; height: auto;';
             const hoverStyle = 'filter: brightness(70%);';
             for (let url = 0; url < speciesImages.length; url++) {
-                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.JPG';
+                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.jpg';
                 console.log(imageUrl)
                 imagesHTML += '<img src="' + imageUrl + '" style="' + spacing + imageStyle + '" alt="' + speciesName + '">';
             }
