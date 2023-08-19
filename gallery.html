@@ -28,7 +28,7 @@
       margin-right: 0;
       margin-bottom: 40px;
       white-space: nowrap;
-      /* overflow: hidden; */
+      overflow: hidden;
       border-right: 2px solid;
       animation: typing 3s steps(34), blink 1s infinite;
     }
@@ -131,6 +131,14 @@
   <p class="contact-text">For full-size images, send me an email @tracytanggg@gmail.com •ᴗ•</p>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Show all the images by default
+      const images = document.querySelectorAll('.image');
+      images.forEach((image) => {
+        image.style.display = 'block';
+      });
+    });
+
     function showImage(category) {
       // Hide all the images
       const images = document.querySelectorAll('.image');
