@@ -72,19 +72,19 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#sky">Sky</a></li>
             <li><a href="#land">Land</a></li>
+            <li><a href="#sky">Sky</a></li>
             <li><a href="#vegetation">Vegetation</a></li>
         </ul>
     </nav>
     <section>
-        <div id="sky" class="species">
-            <h2>Sky</h2>
-            <div id="sky-images"></div>
-        </div>
         <div id="land" class="species">
             <h2>Land</h2>
             <div id="land-images"></div>
+        </div>
+        <div id="sky" class="species">
+            <h2>Sky</h2>
+            <div id="sky-images"></div>
         </div>
         <div id="vegetation" class="species">
             <h2>Vegetation</h2>
@@ -94,6 +94,13 @@
 
     <script>
         urls = {
+            'land':
+                [
+                    'IMG_1220_small',
+                    'IMG_1627_small',
+                    'IMG_1635_small',
+                    'IMG_2093_small',
+                ],
             'sky':
                 [
                     'IMG_0453_small',
@@ -106,13 +113,6 @@
                     'IMG_2035_small',
                     'IMG_2126_small',
                     'IMG_2856_small',
-                ],
-            'land':
-                [
-                    'IMG_1220_small',
-                    'IMG_1627_small',
-                    'IMG_1635_small',
-                    'IMG_2093_small',
                 ],
             'vegetation':
                 [
