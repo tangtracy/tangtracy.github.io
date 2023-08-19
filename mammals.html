@@ -101,55 +101,55 @@
         urls = {
             'whitetaileddeer':
                 [
-                    'IMG_0673',
-                    'IMG_0688',
-                    'IMG_0693',
-                    'IMG_0706',
-                    'IMG_0763',
-                    'IMG_0821',
-                    'IMG_0822',
-                    'IMG_1027',
-                    'IMG_1036',
-                    'IMG_1037',
-                    'IMG_1038',
-                    'IMG_1242',
-                    'IMG_1243',
-                    'IMG_1244',
-                    'IMG_1246',
-                    'IMG_1249',
-                    'IMG_1250',
-                    'IMG_1851',
-                    'IMG_1853',
-                    'IMG_2140',
-                    'IMG_2228',
-                    'IMG_2237',
-                    'IMG_2238',
-                    'IMG_2248',
-                    'IMG_2787',
-                    'IMG_2829',
-                    'IMG_2854',
-                    'IMG_2857',
+                    'IMG_0673_small',
+                    'IMG_0688_small',
+                    'IMG_0693_small',
+                    'IMG_0706_small',
+                    'IMG_0763_small',
+                    'IMG_0821_small',
+                    'IMG_0822_small',
+                    'IMG_1027_small',
+                    'IMG_1036_small',
+                    'IMG_1037_small',
+                    'IMG_1038_small',
+                    'IMG_1242_small',
+                    'IMG_1243_small',
+                    'IMG_1244_small',
+                    'IMG_1246_small',
+                    'IMG_1249_small',
+                    'IMG_1250_small',
+                    'IMG_1851_small',
+                    'IMG_1853_small',
+                    'IMG_2140_small',
+                    'IMG_2228_small',
+                    'IMG_2237_small',
+                    'IMG_2238_small',
+                    'IMG_2248_small',
+                    'IMG_2787_small',
+                    'IMG_2829_small',
+                    'IMG_2854_small',
+                    'IMG_2857_small',
                 ],
             'graysquirrel':
                 [
-                    'IMG_2085',
+                    'IMG_2085_small',
                 ],
             'domesticshorthairedcat':
                 [
-                    'IMG_0247',
+                    'IMG_0247_small',
                 ],
             'cottontailrabbit':
                 [
-                    'IMG_1085',
-                    'IMG_2107',
-                    'IMG_2115',
-                    'IMG_2219',
-                    'IMG_2334',
-                    'IMG_2357',
-                    'IMG_2360',
-                    'IMG_2361',
-                    'IMG_2364',
-                    'IMG_2740',
+                    'IMG_1085_small',
+                    'IMG_2107_small',
+                    'IMG_2115_small',
+                    'IMG_2219_small',
+                    'IMG_2334_small',
+                    'IMG_2357_small',
+                    'IMG_2360_small',
+                    'IMG_2361_small',
+                    'IMG_2364_small',
+                    'IMG_2740_small',
                 ],
         }
 
@@ -165,7 +165,7 @@
             const imageStyle = 'transition: filter 0.3s ease-in-out; width: 450px; height: auto;';
             const hoverStyle = 'filter: brightness(70%);';
             for (let url = 0; url < speciesImages.length; url++) {
-                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.JPG';
+                const imageUrl = partialUrl + speciesFolder + speciesImages[url] + '.jpg';
                 console.log(imageUrl)
                 imagesHTML += '<img src="' + imageUrl + '" style="' + spacing + imageStyle + '" alt="' + speciesName + '">';
             }
