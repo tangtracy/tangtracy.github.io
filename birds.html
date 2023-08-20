@@ -95,6 +95,8 @@
             <li><a href="#canada-goose">Canada Goose</a></li>
             <li><a href="#black-capped-chickadee">Black-capped Chickadee</a></li>
             <li><a href="#red-tailed-hawk">Red-tailed Hawk</a></li>
+            <li><a href="#beltedkingfisher">Belted Kingfisher</a></li>
+            <li><a href="#greatblueheron">Great Blue Heron</a></li>
             <li><a href="#unidentified">Unidentified</a></li>
         </ul>
     </nav>
@@ -114,6 +116,10 @@
         <div id="northern-cardinal" class="species">
             <h2>Northern Cardinal</h2>
             <div id="northern-cardinal-images"></div>
+        </div>
+        <div id="great-blue-heron" class="species">
+            <h2>Great Blue Heron</h2>
+            <div id="great-blue-heron-images"></div>
         </div>
         <div id="song-sparrow" class="species">
             <h2>Song Sparrow</h2>
@@ -190,6 +196,10 @@
         <div id="red-tailed-hawk" class="species">
             <h2>Red-tailed Hawk</h2>
             <div id="red-tailed-hawk-images"></div>
+        </div>
+        <div id="belted-kingfisher" class="species">
+            <h2>Belted Kingfisher</h2>
+            <div id="belted-kingfisher-images"></div>
         </div>
         <div id="unidentified" class="species">
             <h2>Unidentified</h2>
@@ -375,12 +385,23 @@
                 [
                     'IMG_0129_small',
                 ],
+            'beltedkingfisher':
+                [
+                    'IMG_3403_small',
+                ],
+            'greatblueheron':
+                [
+                    'IMG_3501_crop_small',
+                    'IMG_3501_small',
+                    'IMG_3503_small',
+                    'IMG_3509_small',
+                    'IMG_3538_small',
+                ],
             'unidentified':
                 [
                     'IMG_0397_small',
                     'IMG_2254_small',
                 ],
-
         }
 
 
@@ -420,6 +441,7 @@
 
         function displayAllImages() {
             displayImages('Red-winged Blackbird', 'red-winged-blackbird-images');
+            displayImages('Great Blue Heron', 'great-blue-heron-images');
             displayImages('American Robin', 'american-robin-images');
             displayImages('Northern Cardinal', 'northern-cardinal-images');
             displayImages('Song Sparrow', 'song-sparrow-images');
@@ -442,6 +464,7 @@
             displayImages('Canada Goose', 'canada-goose-images');
             displayImages('Black-capped Chickadee', 'black-capped-chickadee-images');
             displayImages('Red-tailed Hawk', 'red-tailed-hawk-images');
+            displayImages('Belted Kingfisher', 'belted-kingfisher-images');
             displayImages('Unidentified', 'unidentified-images');
         }
 
