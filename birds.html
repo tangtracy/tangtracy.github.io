@@ -75,6 +75,8 @@
             <li><a href="#red-winged-blackbird">Red-winged Blackbird</a></li>
             <li><a href="#american-robin">American Robin</a></li>
             <li><a href="#northern-cardinal">Northern Cardinal</a></li>
+            <li><a href="#great-blue-heron">Great Blue Heron</a></li>
+            <li><a href="#green-heron">Green Heron</a></li>
             <li><a href="#song-sparrow">Song Sparrow</a></li>
             <li><a href="#american-goldfinch">American Goldfinch</a></li>
             <li><a href="#blue-jay">Blue Jay</a></li>
@@ -94,9 +96,9 @@
             <li><a href="#indigo-bunting">Indigo Bunting</a></li>
             <li><a href="#canada-goose">Canada Goose</a></li>
             <li><a href="#black-capped-chickadee">Black-capped Chickadee</a></li>
+            <li><a href="#mallard">Mallard</a></li>
             <li><a href="#red-tailed-hawk">Red-tailed Hawk</a></li>
-            <li><a href="#beltedkingfisher">Belted Kingfisher</a></li>
-            <li><a href="#greatblueheron">Great Blue Heron</a></li>
+            <li><a href="#belted-kingfisher">Belted Kingfisher</a></li>
             <li><a href="#unidentified">Unidentified</a></li>
         </ul>
     </nav>
@@ -120,6 +122,10 @@
         <div id="great-blue-heron" class="species">
             <h2>Great Blue Heron</h2>
             <div id="great-blue-heron-images"></div>
+        </div>
+        <div id="green-heron" class="species">
+            <h2>Green Heron</h2>
+            <div id="green-heron-images"></div>
         </div>
         <div id="song-sparrow" class="species">
             <h2>Song Sparrow</h2>
@@ -193,6 +199,10 @@
             <h2>Black-capped Chickadee</h2>
             <div id="black-capped-chickadee-images"></div>
         </div>
+        <div id="mallard" class="species">
+            <h2>Mallard</h2>
+            <div id="mallard"></div>
+        </div>
         <div id="red-tailed-hawk" class="species">
             <h2>Red-tailed Hawk</h2>
             <div id="red-tailed-hawk-images"></div>
@@ -250,6 +260,32 @@
                 [
                     'IMG_0328_small',
                     'IMG_0377_small',
+                ],
+            'greatblueheron':
+                [
+                    'IMG_3501_crop_small',
+                    'IMG_3501_small',
+                    'IMG_3503_small',
+                    'IMG_3509_small',
+                    'IMG_3538_small',
+                ],
+            'greenheron':
+                [
+                    'IMG_4221_small',
+                    'IMG_4244_small',
+                    'IMG_3684_small',
+                    'IMG_3698_small',
+                    'IMG_3705_small',
+                    'IMG_4483_small',
+                    'IMG_4458_small',
+                    'IMG_4475_small',
+                    'IMG_4022_small',
+                    'IMG_3668_small',
+                    'IMG_3732_small',
+                    'IMG_3768_small',
+                    'IMG_4210_small',
+                    'IMG_4386_small',
+                    'IMG_4428_small',
                 ],
             'songsparrow':
                 [
@@ -381,6 +417,10 @@
                     'IMG_1606_small',
                     'IMG_1609_small',
                 ],
+            'mallard':
+                [
+                    'IMG_3846_small',
+                ],
             'redtailedhawk':
                 [
                     'IMG_0129_small',
@@ -388,14 +428,6 @@
             'beltedkingfisher':
                 [
                     'IMG_3403_small',
-                ],
-            'greatblueheron':
-                [
-                    'IMG_3501_crop_small',
-                    'IMG_3501_small',
-                    'IMG_3503_small',
-                    'IMG_3509_small',
-                    'IMG_3538_small',
                 ],
             'unidentified':
                 [
@@ -441,9 +473,10 @@
 
         function displayAllImages() {
             displayImages('Red-winged Blackbird', 'red-winged-blackbird-images');
-            displayImages('Great Blue Heron', 'great-blue-heron-images');
             displayImages('American Robin', 'american-robin-images');
             displayImages('Northern Cardinal', 'northern-cardinal-images');
+            displayImages('Great Blue Heron', 'great-blue-heron-images');
+            displayImages('Green Heron', 'green-heron-images');
             displayImages('Song Sparrow', 'song-sparrow-images');
             displayImages('American Goldfinch', 'american-goldfinch-images');
             displayImages('Blue Jay', 'blue-jay-images');
@@ -463,6 +496,7 @@
             displayImages('Indigo Bunting', 'indigo-bunting-images');
             displayImages('Canada Goose', 'canada-goose-images');
             displayImages('Black-capped Chickadee', 'black-capped-chickadee-images');
+            displayImages('Mallard', 'mallard-images');
             displayImages('Red-tailed Hawk', 'red-tailed-hawk-images');
             displayImages('Belted Kingfisher', 'belted-kingfisher-images');
             displayImages('Unidentified', 'unidentified-images');
