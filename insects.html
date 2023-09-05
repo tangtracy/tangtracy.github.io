@@ -73,6 +73,7 @@
     <nav>
         <ul>
             <li><a href="#bumble-bee">Bumble Bee</a></li>
+            <li><a href="#egira-crucialis">Egira Crucialis</a></li>
         </ul>
     </nav>
     <section>
@@ -80,19 +81,16 @@
             <h2>Bumble Bee</h2>
             <div id="bumble-bee-images"></div>
         </div>
+        <div id="egira-crucialis" class="species">
+            <h2>Egira crucialis</h2>
+            <div id="egira-crucialis-images"></div>
+        </div>
     </section>
 
     <script>
         urls = {
             'bumblebee':
                 [
-                    // 'IMG_0558',
-                    // 'IMG_0559',
-                    // 'IMG_0561',
-                    // 'IMG_0575',
-                    // 'IMG_0583',
-                    // 'IMG_0590',
-                    // 'IMG_2040',
                     'IMG_0558_small',
                     'IMG_0559_small',
                     'IMG_0561_small',
@@ -100,6 +98,10 @@
                     'IMG_0583_small',
                     'IMG_0590_small',
                     'IMG_2040_small',
+                ],
+            'egiracrucialis':
+                [
+                    'IMG_5618_small',
                 ],
         }
 
@@ -139,6 +141,7 @@
 
         function displayAllImages() {
             displayImages('Bumble Bee', 'bumble-bee-images');
+            displayImages('Egira Crucialis', 'egira-crucialis-images');
         }
 
         displayAllImages()
